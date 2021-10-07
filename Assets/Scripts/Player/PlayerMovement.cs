@@ -28,14 +28,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) 
+        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject()) 
         {
 
             Ray ray = theCam.ScreenPointToRay(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
             if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers)) 
             {
                 curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
-                Debug.Log("NewTarget:" + curTarget);
                 targetForward = (curTarget - rb.position).normalized;
             }
         }
