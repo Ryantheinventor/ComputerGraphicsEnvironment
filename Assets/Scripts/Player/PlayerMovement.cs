@@ -8,15 +8,22 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask pickingLayers;
     public float speed = 3;
     public float moveDistThreshold = 0.1f;
+    public float rotateSpeed = 10;
     private Camera theCam;
     private Vector3 curTarget;
     private Rigidbody rb;
-
+    public Animator playerAnimator;
+    private float curSpeed = 0;
+    private Vector3 targetForward;
+    private Vector3 lastPos;
     private void Start()
     {
+        
+        targetForward = transform.forward;
         curTarget = transform.position;
         theCam = Camera.main;
         rb = GetComponent<Rigidbody>();
+        lastPos = rb.position;
     }
 
     private void Update()
@@ -29,9 +36,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
                 Debug.Log("NewTarget:" + curTarget);
-                transform.forward = (curTarget - rb.position).normalized;
+                targetForward = (curTarget - rb.position).normalized;
             }
         }
+
+        transform.forward = Vector3.Lerp(transform.forward, targetForward, Time.deltaTime * rotateSpeed);
+
     }
 
 
@@ -40,11 +50,17 @@ public class PlayerMovement : MonoBehaviour
         if (Vector3.Distance(curTarget, transform.position) > moveDistThreshold)
         {
             rb.position += (curTarget - rb.position).normalized * Time.fixedDeltaTime * speed;
+            curSpeed = Vector3.Distance(rb.position, lastPos) / Time.fixedDeltaTime;
+            
         }
         else 
         {
+            curSpeed = Mathf.Lerp(curSpeed, 0, Time.fixedDeltaTime * 10);
             transform.position = curTarget;
         }
+        playerAnimator.SetFloat("Speed", curSpeed);
+        lastPos = rb.position;
+
     }
 
 
