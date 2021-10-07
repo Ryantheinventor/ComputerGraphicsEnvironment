@@ -9,12 +9,16 @@ public class UnityEventFloat : UnityEvent<float> { }
 public class UITestPlayer : MonoBehaviour
 {
     public GameObject boxODeath;
-    public float maxHealth;
-    public UnityEventFloat OnHealthChanged { get; private set; } = new UnityEventFloat();
-
-
-    private void OnCollisionEnter(Collision collision)
+    private float curWait = 4;
+    private void Update() 
     {
-        OnHealthChanged.Invoke(Random.Range(5,20));
+        curWait -= Time.deltaTime;
+        if (curWait < 0) 
+        {
+            GetComponent<HealthBarControls>().CurHealth += Random.Range(-50, 50);
+            curWait = 0.7f;
+        }
     }
+
 }
+

@@ -6,7 +6,7 @@ using TMPro;
 public class Healthbar : MonoBehaviour
 {
 
-    public UITestPlayer player;
+    public HealthBarControls player;
     public TextMeshProUGUI text;
     public RectTransform slowBar;
     public RectTransform fastBar;
@@ -21,7 +21,8 @@ public class Healthbar : MonoBehaviour
 
     private void Start()
     {
-        player.OnHealthChanged.AddListener(OnDamage);
+        player.OnDamage.AddListener(OnHeal);
+        player.OnHeal.AddListener(OnDamage);
         maxHealth = player.maxHealth;
         trueHealth = maxHealth;
         slowHealth = maxHealth;
