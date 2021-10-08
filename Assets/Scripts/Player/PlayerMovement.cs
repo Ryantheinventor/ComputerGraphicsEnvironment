@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float curSpeed = 0;
     private Vector3 targetForward;
     private Vector3 lastPos;
+    private Vector3 moveDirection;
+    public GameObject ClickArrows;
     private void Start()
     {
         
@@ -28,17 +30,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject()) 
+        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
         {
 
             Ray ray = theCam.ScreenPointToRay(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-            if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers)) 
+            if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers))
             {
                 curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
                 targetForward = (curTarget - rb.position).normalized;
+                GameObject newArrows = Instantiate(ClickArrows);
+                newArrows.transform.position = hInfo.point;
             }
         }
-
+       
         transform.forward = Vector3.Lerp(transform.forward, targetForward, Time.deltaTime * rotateSpeed);
 
     }
@@ -58,6 +62,11 @@ public class PlayerMovement : MonoBehaviour
             transform.position = curTarget;
         }
         playerAnimator.SetFloat("Speed", curSpeed);
+        moveDirection = transform.InverseTransformVector(rb.position - lastPos).normalized * curSpeed;
+
+        playerAnimator.SetFloat("RelativeX", moveDirection.x);
+        playerAnimator.SetFloat("RelativeY", moveDirection.z);
+
         lastPos = rb.position;
 
     }

@@ -15,7 +15,8 @@ public class TurretHeadTageting : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        myRB.rotation = Quaternion.LookRotation(target.position - myRB.position, Vector3.up);
+        Vector3 targetDirection = target.position - myRB.position;
+        myRB.rotation = Quaternion.LookRotation(new Vector3(targetDirection.x,0,targetDirection.z), Vector3.up);
     }
 
 

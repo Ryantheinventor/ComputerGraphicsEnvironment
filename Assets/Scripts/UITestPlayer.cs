@@ -16,7 +16,7 @@ public class UITestPlayer : MonoBehaviour
         if (curWait < 0) 
         {
             GetComponent<HealthBarControls>().CurHealth += Random.Range(-50, 50);
-            curWait = 0.7f;
+            curWait = 1.2f;
         }
     }
 
