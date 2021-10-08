@@ -21,8 +21,8 @@ public class Healthbar : MonoBehaviour
 
     private void Start()
     {
-        player.OnDamage.AddListener(OnHeal);
-        player.OnHeal.AddListener(OnDamage);
+        player.OnDamage.AddListener(OnDamage);
+        player.OnHeal.AddListener(OnHeal);
         maxHealth = player.maxHealth;
         trueHealth = maxHealth;
         slowHealth = maxHealth;
