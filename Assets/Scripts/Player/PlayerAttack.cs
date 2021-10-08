@@ -28,11 +28,9 @@ public class PlayerAttack : MonoBehaviour
             if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers))
             {
                 Vector3 curTargetPos = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
-                Debug.Log("Attack");
-                if (weapons.Count - 1 >= curWeapon) 
-                {
-                    Debug.Log("ASDGf");
-                    weapons[curWeapon].Attack(curTargetPos);
+                if (weapons.Count - 1 >= curWeapon)
+                { 
+                    weapons[curWeapon].Attack(curTargetPos, transform.position);
                 }
             }
         }
@@ -48,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
 
 public class Weapon : MonoBehaviour 
 {
-    public virtual void Attack(Vector3 target) 
+    public virtual void Attack(Vector3 target, Vector3 playerPos) 
     {   
 
     }

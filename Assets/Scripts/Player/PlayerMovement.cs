@@ -18,9 +18,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lastPos;
     private Vector3 moveDirection;
     public GameObject ClickArrows;
+    private PlayerIK ikController;
     private void Start()
     {
-        
+        ikController = GetComponentInChildren<PlayerIK>();
         targetForward = transform.forward;
         curTarget = transform.position;
         theCam = Camera.main;
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
                 targetForward = (curTarget - rb.position).normalized;
                 GameObject newArrows = Instantiate(ClickArrows);
                 newArrows.transform.position = hInfo.point;
+                ikController.SetLookTarget(curTarget);
             }
         }
        
@@ -70,10 +72,4 @@ public class PlayerMovement : MonoBehaviour
         lastPos = rb.position;
 
     }
-
-
-
-
-
-
 }

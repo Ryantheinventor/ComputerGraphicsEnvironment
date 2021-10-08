@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TurretHeadTageting))]
-public class BowTowerController : MonoBehaviour
+public class BowTowerController : TowerController
 {
     public GameObject arrowFab;
     public GameObject arrowSpawnPoint;
@@ -24,6 +24,7 @@ public class BowTowerController : MonoBehaviour
 
     private void Start()
     {
+        
         headTageting = GetComponent<TurretHeadTageting>();
         target = headTageting.target.gameObject;
     }
@@ -57,6 +58,12 @@ public class BowTowerController : MonoBehaviour
                 curShotWaitTime = 0;
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        if(EnemyWaves.activeEnemies.Contains(this))
+            EnemyWaves.activeEnemies.Remove(this);
     }
 
 

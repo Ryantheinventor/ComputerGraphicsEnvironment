@@ -19,6 +19,9 @@ public class Projectile : MonoBehaviour
         {
             other.gameObject.GetComponent<HealthBarControls>().CurHealth -= Random.Range(damage / 2f, damage);
         }
-        Destroy(gameObject);
+        if (!other.gameObject.CompareTag("Enemy")) 
+        {
+            Destroy(gameObject);
+        }
     }
 }
