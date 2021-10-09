@@ -14,6 +14,8 @@ public class PlayerAttack : MonoBehaviour
 
     private Camera theCam;
 
+    public PlayerMovement pm;
+
     private void Start()
     {
         theCam = theCam = Camera.main;
@@ -23,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-
+            
             Ray ray = theCam.ScreenPointToRay(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
             if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers))
             {
