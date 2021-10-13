@@ -8682,9 +8682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963259685827283879, guid: d87a1d1d26c7a9d4fbfb81b64270c980, type: 3}
       propertyPath: m_text
-      value: 'Wave
-
-'
+      value: Push
       objectReference: {fileID: 0}
     - target: {fileID: 8963259685827283879, guid: d87a1d1d26c7a9d4fbfb81b64270c980, type: 3}
       propertyPath: m_fontSize
