@@ -10,7 +10,7 @@ public class PushProjectile : MonoBehaviour
         Debug.Log(other);
         if (other.CompareTag("Enemy")) 
         {
-            other.GetComponent<DestroyOnHealth>().Health -= damage;
+            other.GetComponent<DestroyOnHealth>().Health -= (int)damage;
         }
     }
 }
