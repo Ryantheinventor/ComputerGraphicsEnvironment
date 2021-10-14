@@ -4995,7 +4995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e867a61fef62ce7428522554b989e197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaNeeded: 20
+  manaNeeded: 50
   damage: 2
   animStateName: Spam
   particleSystem: {fileID: 1320394945}
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed84f798ad6c8854bbc88a6ada738fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaNeeded: 10
+  manaNeeded: 30
   animStateName: Push
   pushVFXFab: {fileID: 2013117700241643765, guid: 4705690d4e102a84f8bc56e3dcf607f9, type: 3}
 --- !u!114 &1051033534
@@ -5080,13 +5080,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99413df02806aaa4a84c06d9c0fdba86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaNeeded: 5
+  manaNeeded: 10
   animStateName: Clap
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1024
   radius: 1.8
-  damage: 4
+  damage: 3.5
   maxRange: 5
   vfxFab: {fileID: 7343693057085802899, guid: 23c32f0b4f9dc724684be6949be9e18f, type: 3}
 --- !u!114 &1051033535
