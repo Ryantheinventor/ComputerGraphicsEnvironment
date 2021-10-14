@@ -14,6 +14,7 @@ public class FancyButton : MonoBehaviour
     [Header("Color")]
     public Color selectedTint = new Color(1, 1, 1, 1);
     public Color pressedTint = new Color(1, 1, 1, 1);
+    public Color dissabledTint = new Color(1, 1, 1, 1);
     public float colorChangeSpeed = 1f;
     private Color startTint;
     private Image myImage;
@@ -31,6 +32,21 @@ public class FancyButton : MonoBehaviour
     public FancyClickEvent onHold;
 
     public FancyClickEvent onClick;
+
+
+    private bool enabled = true;
+    public bool Enabled 
+    {
+        get => enabled;
+        set 
+        {
+            enabled = value;
+            if (!enabled) 
+            {
+                myImage.color = dissabledTint;
+            }
+        }
+    }
 
     private void Start()
     {
@@ -66,21 +82,24 @@ public class FancyButton : MonoBehaviour
 
     private void Update()
     {
-        if (mouseIsDown)
+        if (enabled) 
         {
-            myImage.color = Color.Lerp(myImage.color, pressedTint, colorChangeSpeed * Time.deltaTime);
-            myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + pressedPixelDelta, sizeChangeSpeed * Time.deltaTime);
-            onHold.Invoke();
-        }
-        else if (mouseIsOver)
-        {
-            myImage.color = Color.Lerp(myImage.color, selectedTint, colorChangeSpeed * Time.deltaTime);
-            myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + selectedPixelDelta, sizeChangeSpeed * Time.deltaTime);
-        }
-        else 
-        {
-            myImage.color = Color.Lerp(myImage.color, startTint, colorChangeSpeed * Time.deltaTime);
-            myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize, sizeChangeSpeed * Time.deltaTime);
+            if (mouseIsDown)
+            {
+                myImage.color = Color.Lerp(myImage.color, pressedTint, colorChangeSpeed * Time.deltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + pressedPixelDelta, sizeChangeSpeed * Time.deltaTime);
+                onHold.Invoke();
+            }
+            else if (mouseIsOver)
+            {
+                myImage.color = Color.Lerp(myImage.color, selectedTint, colorChangeSpeed * Time.deltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + selectedPixelDelta, sizeChangeSpeed * Time.deltaTime);
+            }
+            else
+            {
+                myImage.color = Color.Lerp(myImage.color, startTint, colorChangeSpeed * Time.deltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize, sizeChangeSpeed * Time.deltaTime);
+            }
         }
     }
 

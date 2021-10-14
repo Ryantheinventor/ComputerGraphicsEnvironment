@@ -13,7 +13,7 @@ public class PushAttack : Weapon
         animator = GetComponent<PlayerMovement>().playerAnimator;
     }
 
-    public override void Attack(Vector3 target, Vector3 playerPos)
+    public override bool Attack(Vector3 target, Vector3 playerPos)
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName))
         {
@@ -21,6 +21,11 @@ public class PushAttack : Weapon
             GameObject newVFX = Instantiate(pushVFXFab);
             newVFX.transform.position = playerPos;
             newVFX.transform.forward = target - playerPos;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

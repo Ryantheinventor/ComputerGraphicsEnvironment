@@ -10,11 +10,16 @@ public class WaveAttack : Weapon
     {
         animator = GetComponent<PlayerMovement>().playerAnimator;
     }
-    public override void Attack(Vector3 target, Vector3 playerPos)
+    public override bool Attack(Vector3 target, Vector3 playerPos)
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName))
         {
             animator.SetTrigger("Wave");
+            return true;
+        }
+        else 
+        {
+            return false;
         }
     }
 }

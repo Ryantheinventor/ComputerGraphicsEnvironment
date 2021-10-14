@@ -38,15 +38,21 @@ public class PlayerMovement : MonoBehaviour
             if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers))
             {
                 curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
-                targetForward = (curTarget - rb.position).normalized;
+                
                 GameObject newArrows = Instantiate(ClickArrows);
                 newArrows.transform.position = hInfo.point;
-                ikController.SetLookTarget(curTarget);
+                SetNewTargetLook(curTarget);
             }
         }
        
         transform.forward = Vector3.Lerp(transform.forward, targetForward, Time.deltaTime * rotateSpeed);
 
+    }
+
+    public void SetNewTargetLook(Vector3 target) 
+    {
+        targetForward = (target - rb.position).normalized;
+        ikController.SetLookTarget(target);
     }
 
 

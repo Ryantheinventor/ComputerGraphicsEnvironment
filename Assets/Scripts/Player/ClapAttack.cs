@@ -15,7 +15,7 @@ public class ClapAttack : Weapon
     {
         animator = GetComponent<PlayerMovement>().playerAnimator;
     }
-    public override void Attack(Vector3 target, Vector3 playerPos)
+    public override bool Attack(Vector3 target, Vector3 playerPos)
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName) && Vector3.Distance(playerPos,target) < maxRange) 
         {
@@ -38,6 +38,11 @@ public class ClapAttack : Weapon
                     Debug.LogWarning("Object on enemy layer without health:" + hit.gameObject.name);
                 }
             }
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

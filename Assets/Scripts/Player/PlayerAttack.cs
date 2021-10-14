@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
 
     public LayerMask pickingLayers;
 
+    public Mana manaTracker;
 
     private Camera theCam;
 
@@ -19,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     private void Start()
     {
         theCam = theCam = Camera.main;
+        manaTracker = GetComponent<Mana>();
     }
 
     private void Update()
@@ -31,8 +33,14 @@ public class PlayerAttack : MonoBehaviour
             {
                 Vector3 curTargetPos = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
                 if (weapons.Count - 1 >= curWeapon)
-                { 
-                    weapons[curWeapon].Attack(curTargetPos, transform.position);
+                {
+                    if (weapons[curWeapon].manaNeeded <= manaTracker.CurMana) 
+                    {
+                        if (weapons[curWeapon].Attack(curTargetPos, transform.position)) 
+                        {
+                            manaTracker.CurMana -= weapons[curWeapon].manaNeeded;
+                        }
+                    }
                 }
             }
         }
@@ -48,8 +56,9 @@ public class PlayerAttack : MonoBehaviour
 
 public class Weapon : MonoBehaviour 
 {
-    public virtual void Attack(Vector3 target, Vector3 playerPos) 
-    {   
-
+    public float manaNeeded = 10;
+    public virtual bool Attack(Vector3 target, Vector3 playerPos) 
+    {
+        return false;
     }
 }
