@@ -37,11 +37,14 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = theCam.ScreenPointToRay(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
             if (Physics.Raycast(ray.origin, ray.direction, out RaycastHit hInfo, 100, pickingLayers))
             {
-                curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
-                
-                GameObject newArrows = Instantiate(ClickArrows);
-                newArrows.transform.position = hInfo.point;
-                SetNewTargetLook(curTarget);
+                if (hInfo.collider.gameObject.CompareTag("Floor")) 
+                {
+                    curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
+
+                    GameObject newArrows = Instantiate(ClickArrows);
+                    newArrows.transform.position = hInfo.point;
+                    SetNewTargetLook(curTarget);
+                }
             }
         }
        
