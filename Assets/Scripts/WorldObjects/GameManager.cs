@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int totalCoins = 1;
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
         set
         { 
             curCoins = value;
+            CoinText.text = CurCoins + "/" + totalCoins;
             if (curCoins >= totalCoins) 
             {
                 Debug.Log("You Win");
@@ -20,15 +21,12 @@ public class GameManager : MonoBehaviour
     }
 
     public HealthBarControls healthbar;
+    public TextMeshProUGUI CoinText;
 
     private void Start()
     {
         healthbar.OnDamage.AddListener(OnPlayerDamage);
-    }
-
-    private void Update()
-    {
-        
+        CoinText.text = CurCoins + "/" + totalCoins;
     }
 
     public void OnPlayerDamage(float damage) 
