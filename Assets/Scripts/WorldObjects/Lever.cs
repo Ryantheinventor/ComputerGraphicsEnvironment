@@ -18,7 +18,6 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if (other.GetComponent<PushProjectile>() && !hasSwitched) 
         {
             switchJoint.transform.eulerAngles *= -1;

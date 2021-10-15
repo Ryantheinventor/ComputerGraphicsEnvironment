@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(TurretHeadTageting))]
 public class BowTowerController : TowerController
 {
+    public float range = 5;
     public GameObject arrowFab;
     public GameObject arrowSpawnPoint;
     public float timeBetweenShots = 5;
@@ -38,15 +39,18 @@ public class BowTowerController : TowerController
             curAimTime += Time.deltaTime;
             if (curAimTime >= timeToAim)
             {
-                //shoot here 
-                GameObject newArrow = Instantiate(arrowFab);
-                newArrow.transform.position = arrowSpawnPoint.transform.position;
-                newArrow.transform.forward = headTageting.targetDirection;
-                Projectile p = newArrow.GetComponent<Projectile>();
-                p.velocity = headTageting.targetDirection.normalized * p.speed;
+                if (Vector3.Distance(transform.position, target.transform.position) < range) 
+                {
+                    //shoot here 
+                    GameObject newArrow = Instantiate(arrowFab);
+                    newArrow.transform.position = arrowSpawnPoint.transform.position;
+                    newArrow.transform.forward = headTageting.targetDirection;
+                    Projectile p = newArrow.GetComponent<Projectile>();
+                    p.velocity = headTageting.targetDirection.normalized * p.speed;
 
-                curAimTime = 0;
-                aiming = false;
+                    curAimTime = 0;
+                    aiming = false;
+                }
             }
         }
         else 
