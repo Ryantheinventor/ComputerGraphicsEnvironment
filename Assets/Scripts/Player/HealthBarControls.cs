@@ -12,15 +12,17 @@ public class HealthBarControls : MonoBehaviour
         get => curHealth; 
         set 
         {
-            if (curHealth > value)
+            float tempHealth = curHealth;
+            curHealth = Mathf.Clamp(value, 0, maxHealth);
+            if (tempHealth > value)
             {
-                OnDamage.Invoke(curHealth - value);
+                OnDamage.Invoke(tempHealth - value);
             }
             else 
             {
-                OnHeal.Invoke(value - curHealth);
+                OnHeal.Invoke(value - tempHealth);
             }
-            curHealth = Mathf.Clamp(value, 0, maxHealth);
+            
 
         }
     }
