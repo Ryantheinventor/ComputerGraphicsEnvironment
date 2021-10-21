@@ -5,26 +5,38 @@ using UnityEngine;
 public class PhaseMatOnDeath : DestroyOnHealth
 {
 
-    private bool phaseing = false;
+    private bool phasing = false;
     public float phaseSpeed = 1f;
-    private Material myMat;
-    public SkinnedMeshRenderer meshRenderer;
+    private List<Material> myMats = new List<Material>();
+    public MeshRenderer[] meshRenderers;
+    public SkinnedMeshRenderer[] skinnedMeshRenderers;
     protected override void OnNoHealth()
     {
-        phaseing = true;
+        phasing = true;
     }
 
     private void Start()
     {
-        myMat = meshRenderer.material;
+        foreach (SkinnedMeshRenderer smr in skinnedMeshRenderers)
+        {
+            myMats.Add(smr.material);
+        }
+        foreach (MeshRenderer smr in meshRenderers)
+        {
+            myMats.Add(smr.material);
+        }
+
     }
 
     private void Update()
     {
-        if (phaseing) 
+        if (phasing) 
         {
-            myMat.SetFloat("PhaseAlpha", myMat.GetFloat("PhaseAlpha") - phaseSpeed * Time.deltaTime);
-            if (myMat.GetFloat("PhaseAlpha") <= 0) 
+            foreach (Material m in myMats) 
+            {
+                m.SetFloat("PhaseAlpha", m.GetFloat("PhaseAlpha") - phaseSpeed * Time.deltaTime);
+            }
+            if (myMats[0].GetFloat("PhaseAlpha") <= 0)
             {
                 Destroy(gameObject);
             }
@@ -33,7 +45,10 @@ public class PhaseMatOnDeath : DestroyOnHealth
 
     private void OnDestroy()
     {
-        Destroy(myMat);
+        foreach (Material m in myMats)
+        {
+            Destroy(m);
+        }
     }
 
 }
