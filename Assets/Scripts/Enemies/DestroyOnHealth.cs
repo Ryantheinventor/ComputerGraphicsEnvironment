@@ -14,14 +14,11 @@ public class DestroyOnHealth : MonoBehaviour
     {
         get => health;
         set {
-            if (value > 0)
+            health = value;
+            OnHealthChange.Invoke(health);
+            if (value <= 0)
             {
-                health = value;
-                OnHealthChange.Invoke(health);
-            }
-            else 
-            {
-                Destroy(gameObject);
+                OnNoHealth();
             }
         }
     }
@@ -31,5 +28,9 @@ public class DestroyOnHealth : MonoBehaviour
         health = maxHealth;
     }
 
+    protected virtual void OnNoHealth() 
+    {
+        Destroy(gameObject);
+    }
 
 }

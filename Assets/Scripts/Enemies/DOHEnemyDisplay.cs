@@ -22,7 +22,7 @@ public class DOHEnemyDisplay : MonoBehaviour
 
     public void UpdateHealthBar(float health) 
     {
-        while (health < healthPoints.Count) 
+        while (health < healthPoints.Count && health > 0) 
         {
             GameObject cur = healthPoints[healthPoints.Count - 1];
             healthPoints.Remove(cur);
