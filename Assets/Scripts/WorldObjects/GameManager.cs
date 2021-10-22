@@ -13,8 +13,11 @@ public class GameManager : MonoBehaviour
         { 
             curCoins = value;
             CoinText.text = CurCoins + "/" + totalCoins;
-            if (curCoins >= totalCoins) 
+            if (curCoins >= totalCoins && !gameOver) 
             {
+                gameOver = true;
+                Instantiate(winCanvas);
+                DisablePlayer();
                 Debug.Log("You Win");
             }
         }
@@ -23,6 +26,9 @@ public class GameManager : MonoBehaviour
     public HealthBarControls healthbar;
     public TextMeshProUGUI CoinText;
 
+    public GameObject loseCanvas;
+    public GameObject winCanvas;
+    private bool gameOver = false;
     private void Start()
     {
         healthbar.OnDamage.AddListener(OnPlayerDamage);
@@ -31,10 +37,21 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDamage(float damage) 
     {
-        if (healthbar.CurHealth <= 0) 
+        if (healthbar.CurHealth <= 0 && !gameOver) 
         {
+            gameOver = true;
+            Instantiate(loseCanvas);
+            DisablePlayer();
             Debug.Log("Game Over");
         }
+    }
+
+    private void DisablePlayer()
+    {
+        PlayerMovement pm = FindObjectOfType<PlayerMovement>();
+        pm.GetComponent<PlayerAttack>().enabled = false;
+        pm.enabled = false;
+
     }
 
 }
