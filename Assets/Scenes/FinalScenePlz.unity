@@ -10503,6 +10503,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -10547,9 +10555,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -10816,6 +10832,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -10860,9 +10884,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -20589,6 +20621,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72
@@ -20633,9 +20673,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -20810,6 +20858,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.25
@@ -20854,9 +20910,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -26930,6 +26994,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40
@@ -26974,9 +27046,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -28143,6 +28223,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49
@@ -28187,9 +28275,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -30558,6 +30654,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -30602,9 +30706,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -35996,6 +36108,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349675022}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1351702282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351702283}
+  - component: {fileID: 1351702286}
+  - component: {fileID: 1351702285}
+  - component: {fileID: 1351702284}
+  m_Layer: 16
+  m_Name: ShinyShader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351702283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351702282}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 0.03784787, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1546107800}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!136 &1351702284
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351702282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1351702285
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351702282}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7dd3971fa85978b4793082989133409f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1351702286
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351702282}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1354410818
 GameObject:
   m_ObjectHideFlags: 0
@@ -39134,6 +39342,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.75
@@ -39178,9 +39394,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -39852,6 +40076,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540294481}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1546107800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+  m_PrefabInstance: {fileID: 1155493292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549632810
 GameObject:
   m_ObjectHideFlags: 0
@@ -41436,6 +41665,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.5
@@ -41480,9 +41717,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -45532,6 +45777,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50
@@ -45576,9 +45829,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
@@ -47317,6 +47578,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458018868589214934, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676569978258697767, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3108730627560952543, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.75
@@ -47361,9 +47630,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571878073886027911, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
       propertyPath: m_Name
       value: LEDCoin (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570578617266977063, guid: f6145397e277e25499e8f558271f63e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6145397e277e25499e8f558271f63e3, type: 3}
