@@ -6,7 +6,8 @@ public class Mana : MonoBehaviour
 {
     public float maxMana = 100;
     public float rechargeSpeed = 10;
-    public bool startWithMax = true;
+    //public bool startWithMax = true;
+    public float startWithValue = 50;
     private float curMana = 0;
     public float CurMana 
     {
@@ -22,10 +23,7 @@ public class Mana : MonoBehaviour
 
     private void Start()
     {
-        if (startWithMax) 
-        {
-            CurMana = maxMana;
-        }
+        CurMana = startWithValue;
         onManaChange.Invoke(CurMana);
     }
 
