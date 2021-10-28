@@ -1046,7 +1046,7 @@ MonoBehaviour:
   pickingLayers:
     serializedVersion: 2
     m_Bits: 256
-  manaTracker: {fileID: 0}
+  manaTracker: {fileID: 7834297786641314388}
   pm: {fileID: 7834297786641314338}
 --- !u!114 &7834297786641314346
 MonoBehaviour:
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   manaNeeded: 50
   damage: 2
   animStateName: Spam
-  particleSystem: {fileID: 7834297786910944597}
+  ps: {fileID: 7834297786910944597}
   particleMount: {fileID: 7834297785810253068}
 --- !u!114 &7834297786641314388
 MonoBehaviour:
