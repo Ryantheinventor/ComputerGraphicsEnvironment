@@ -71,7 +71,7 @@ public class EnemyWaves : MonoBehaviour
         
         Vector3 newSpawn = RSpawnPos();
         int trys = 0;
-        while (Physics.OverlapBox(newSpawn, new Vector3(2, 2, 2), Quaternion.EulerAngles(Vector3.zero), enemyLayer).Length > 0)
+        while (Physics.OverlapBox(newSpawn, new Vector3(2, 2, 2), Quaternion.Euler(Vector3.zero), enemyLayer).Length > 0)
         {
             trys++;
             if (trys >= 5) 

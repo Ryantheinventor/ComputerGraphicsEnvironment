@@ -6,7 +6,7 @@ public class SpamFireAttack : Weapon
 {
     public float damage = 1;
     public string animStateName = "Spam";
-    public ParticleSystem particleSystem;
+    public ParticleSystem ps;
     public Transform particleMount;
     private PlayerMovement playerMovement;
     private Animator animator;
@@ -15,7 +15,7 @@ public class SpamFireAttack : Weapon
 
     private void Start()
     {
-        pch = particleSystem.GetComponent<ParticleCollisionHandler>();
+        pch = ps.GetComponent<ParticleCollisionHandler>();
         pch.damage = damage;
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<PlayerMovement>().playerAnimator;
@@ -32,7 +32,7 @@ public class SpamFireAttack : Weapon
         {
             playerMovement.SetNewTargetLook(target);
             animator.SetTrigger("Spam");
-            particleSystem.Play();
+            ps.Play();
             direction = (target - particleMount.position).normalized;
             particleMount.transform.forward = direction;
             return true;

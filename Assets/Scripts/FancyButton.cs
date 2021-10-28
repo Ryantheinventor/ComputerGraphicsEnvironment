@@ -34,14 +34,14 @@ public class FancyButton : MonoBehaviour
     public FancyClickEvent onClick;
 
 
-    private bool enabled = true;
+    private bool _enabled = true;
     public bool Enabled 
     {
-        get => enabled;
+        get => _enabled;
         set 
         {
-            enabled = value;
-            if (!enabled) 
+            _enabled = value;
+            if (!_enabled) 
             {
                 myImage.color = dissabledTint;
             }
@@ -82,7 +82,7 @@ public class FancyButton : MonoBehaviour
 
     private void Update()
     {
-        if (enabled) 
+        if (_enabled) 
         {
             if (mouseIsDown)
             {

@@ -8,18 +8,18 @@ public class LightFlicker : MonoBehaviour
     private float curTime = 0;
     [Range(0,1)]
     public float chance = 0.5f;
-    public GameObject light;
+    public GameObject fLight;
     private void Update() 
     {
-        if(light)
+        if(fLight)
         {
             curTime += Time.deltaTime;
             if(curTime>=timeBetweenAttempt)
             {
                 int iChance = (int)(chance * 100);
-                if(Random.RandomRange(0,100) <= iChance)
+                if(Random.Range(0,100) <= iChance)
                 {
-                    light.SetActive(!light.activeSelf);
+                    fLight.SetActive(!fLight.activeSelf);
                 }
                 curTime = 0;
             }
