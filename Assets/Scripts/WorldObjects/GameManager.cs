@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
     private void DisablePlayer()
     {
         PlayerMovement pm = FindObjectOfType<PlayerMovement>();
+        pm.playerAnimator.SetFloat("Speed",0);
+        pm.playerAnimator.SetFloat("RelativeX",0);
+        pm.playerAnimator.SetFloat("RelativeY",0);
         pm.GetComponent<PlayerAttack>().enabled = false;
         pm.enabled = false;
 

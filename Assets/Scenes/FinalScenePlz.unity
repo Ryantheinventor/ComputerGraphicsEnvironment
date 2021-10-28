@@ -3855,6 +3855,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7834297786641314347, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
+      propertyPath: manaTracker
+      value: 
+      objectReference: {fileID: 1051033536}
     - target: {fileID: 7834297786641314348, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
       propertyPath: damage
       value: 0.7
