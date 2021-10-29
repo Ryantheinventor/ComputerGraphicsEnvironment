@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//player health container that controlls a HealthBar object
 public class HealthBarControls : MonoBehaviour
 {
     public float maxHealth;

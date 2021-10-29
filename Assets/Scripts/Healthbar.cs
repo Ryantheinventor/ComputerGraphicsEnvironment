@@ -31,6 +31,7 @@ public class Healthbar : MonoBehaviour
         text.text = (int)trueHealth + "/" + (int)maxHealth;
     }
 
+    //handles animation both over and under health bars to move to acurate positions smoothly
     private void Update()
     {
 
@@ -81,6 +82,7 @@ public class Healthbar : MonoBehaviour
         }
     }
 
+    //sets the bar to a scale based off the health value passed to it
     private void SetSize(float health, RectTransform bar) 
     {
         float curHealthRatio = health / maxHealth;

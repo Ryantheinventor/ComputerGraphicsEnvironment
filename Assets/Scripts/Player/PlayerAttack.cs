@@ -23,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
         manaTracker = GetComponent<Mana>();
     }
 
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -46,6 +47,9 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    ///<summary>
+    ///hi
+    ///</summary>
     public void SetWeapon(int id) 
     {
         curWeapon = id;
@@ -54,9 +58,13 @@ public class PlayerAttack : MonoBehaviour
 
 }
 
+//base class for any type of attack the player can use
 public class Weapon : MonoBehaviour 
 {
     public float manaNeeded = 10;
+    /// <summary>
+    /// Perform necessary actions for an attack with this Weapon
+    /// </summary>
     public virtual bool Attack(Vector3 target, Vector3 playerPos) 
     {
         return false;

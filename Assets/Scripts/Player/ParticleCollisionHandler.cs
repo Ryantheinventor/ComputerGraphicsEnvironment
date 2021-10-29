@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Damages a DestroyOnHealh object after a particle collision with it
 public class ParticleCollisionHandler : MonoBehaviour
 {
     [HideInInspector]

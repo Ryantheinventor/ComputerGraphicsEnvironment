@@ -16,6 +16,7 @@ public class Lever : MonoBehaviour
 
     private bool hasSwitched = false;
 
+    //switch the lever if a PushProjectile hits it
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PushProjectile>() && !hasSwitched) 

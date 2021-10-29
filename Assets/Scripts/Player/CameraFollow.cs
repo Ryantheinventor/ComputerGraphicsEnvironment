@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//keeps camera in a position over a target
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;

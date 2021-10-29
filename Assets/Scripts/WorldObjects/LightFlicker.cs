@@ -9,6 +9,8 @@ public class LightFlicker : MonoBehaviour
     [Range(0,1)]
     public float chance = 0.5f;
     public GameObject fLight;
+
+    //attemts to change the state of a light every [timeBetweenAttempt] seconds with a success rate of ([chance]*100)%
     private void Update() 
     {
         if(fLight)

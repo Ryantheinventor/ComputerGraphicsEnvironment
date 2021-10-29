@@ -15,6 +15,7 @@ public class ManaBar : MonoBehaviour
 
     private void Start()
     {
+        //save maximum size
         manaTracker.onManaChange.AddListener(UpdateBar);
         maxMana = manaTracker.maxMana;
         barLengeth = bar.sizeDelta.x;
@@ -26,12 +27,14 @@ public class ManaBar : MonoBehaviour
         trueMana = manaValue;
     }
 
+    //animate the bar into an acurate scale
     private void Update()
     {
         curValue = Mathf.Lerp(curValue, trueMana, 15 * Time.deltaTime);
         SetSize(curValue, bar);
     }
 
+    //sets the bar to a scale based off the mana value passed to it
     private void SetSize(float mana, RectTransform bar)
     {
         float curHealthRatio = mana / maxMana;

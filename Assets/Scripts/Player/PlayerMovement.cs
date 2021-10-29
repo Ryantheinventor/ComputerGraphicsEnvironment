@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //target picking (only avalible when mouse is not over UI)
         if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
         {
 
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (hInfo.collider.gameObject.CompareTag("Floor")) 
                 {
+                    //target is always set to have the same Y pos as the player (for easy movement)
                     curTarget = new Vector3(hInfo.point.x, transform.position.y, hInfo.point.z);
 
                     GameObject newArrows = Instantiate(ClickArrows);
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //move the player to the target poss
         if (Vector3.Distance(curTarget, transform.position) > moveDistThreshold)
         {
             rb.position += (curTarget - rb.position).normalized * Time.fixedDeltaTime * speed;
@@ -72,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
             curSpeed = Mathf.Lerp(curSpeed, 0, Time.fixedDeltaTime * 10);
             transform.position = curTarget;
         }
+
+        //update the animator
         playerAnimator.SetFloat("Speed", curSpeed);
         moveDirection = transform.InverseTransformVector(rb.position - lastPos).normalized * curSpeed;
 
@@ -82,3 +87,4 @@ public class PlayerMovement : MonoBehaviour
 
     }
 }
+

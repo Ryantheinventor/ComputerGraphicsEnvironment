@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
         { 
             curCoins = value;
             CoinText.text = CurCoins + "/" + totalCoins;
+            //ends the game when all coins are collected
             if (curCoins >= totalCoins && !gameOver) 
             {
                 gameOver = true;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         CoinText.text = CurCoins + "/" + totalCoins;
     }
 
+    //checks if the game should end when the player takes damage
     public void OnPlayerDamage(float damage) 
     {
         if (healthbar.CurHealth <= 0 && !gameOver) 
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //disables player movement for when the game is finished
     private void DisablePlayer()
     {
         PlayerMovement pm = FindObjectOfType<PlayerMovement>();
@@ -54,7 +57,5 @@ public class GameManager : MonoBehaviour
         pm.playerAnimator.SetFloat("RelativeY",0);
         pm.GetComponent<PlayerAttack>().enabled = false;
         pm.enabled = false;
-
     }
-
 }

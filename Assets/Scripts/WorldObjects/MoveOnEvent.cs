@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//moves towards a destPos once move is set to true
 public class MoveOnEvent : MonoBehaviour
 {
 
     public Vector3 destPos = new Vector3(0, 0, 0);
     public float lerpSpeed = 1;
     private bool move = false;
-    // Update is called once per frame
     void Update()
     {
         if (move) 

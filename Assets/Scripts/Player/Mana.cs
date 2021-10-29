@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//manages the mana of the player
 public class Mana : MonoBehaviour
 {
     public float maxMana = 100;
@@ -29,10 +30,12 @@ public class Mana : MonoBehaviour
 
     private void Update()
     {
+        //recharge mana
         if (CurMana < maxMana)
         {
             CurMana += rechargeSpeed * Time.deltaTime;
         }
+        //give mana a max value
         if (CurMana > maxMana) 
         {
             CurMana = maxMana;

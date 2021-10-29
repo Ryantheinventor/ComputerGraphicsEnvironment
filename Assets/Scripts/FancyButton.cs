@@ -11,6 +11,8 @@ public class FancyClickEvent : UnityEvent { }
 
 public class FancyButton : MonoBehaviour
 {
+    public KeyCode hotKey = KeyCode.None;
+
     [Header("Color")]
     public Color selectedTint = new Color(1, 1, 1, 1);
     public Color pressedTint = new Color(1, 1, 1, 1);
@@ -57,12 +59,15 @@ public class FancyButton : MonoBehaviour
 
 
 
-
+        
         EventTrigger et = GetComponent<EventTrigger>();
         if (!et) 
         {
+            //add event trigger if it is not found
             et = gameObject.AddComponent<EventTrigger>();
         }
+
+        //add mouse events to the button's event trigger
         EventTrigger.Entry entry0 = new EventTrigger.Entry() { eventID = EventTriggerType.PointerEnter };
         entry0.callback.AddListener(new UnityAction<BaseEventData>(MouseEnter));
         et.triggers.Add(entry0);
@@ -80,18 +85,21 @@ public class FancyButton : MonoBehaviour
         et.triggers.Add(entry3);
     }
 
+
     private void Update()
     {
+        //this primarily updates the buttons size
         if (_enabled) 
         {
-            if (mouseIsDown)
+            if (mouseIsDown || Input.GetKey(hotKey))
             {
                 myImage.color = Color.Lerp(myImage.color, pressedTint, colorChangeSpeed * Time.deltaTime);
                 myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + pressedPixelDelta, sizeChangeSpeed * Time.deltaTime);
-                onHold.Invoke();
+                onHold.Invoke();//invoke on hold here so the hotKey can triger it
             }
             else if (mouseIsOver)
             {
+                
                 myImage.color = Color.Lerp(myImage.color, selectedTint, colorChangeSpeed * Time.deltaTime);
                 myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + selectedPixelDelta, sizeChangeSpeed * Time.deltaTime);
             }
@@ -101,10 +109,15 @@ public class FancyButton : MonoBehaviour
                 myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize, sizeChangeSpeed * Time.deltaTime);
             }
         }
+        //invoke on click here for the hotkey
+        if(Input.GetKeyUp(hotKey))//OnKeyUp() because the buttons trigger onClick after release
+        {
+            onClick.Invoke();
+        }
     }
 
 
-
+    //mouse events
     public void MouseEnter(BaseEventData bed)
     {
         mouseIsOver = true;

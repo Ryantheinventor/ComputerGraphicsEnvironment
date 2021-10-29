@@ -25,7 +25,8 @@ public class SpamFireAttack : Weapon
     {
         particleMount.transform.forward = direction;
     }
-
+    
+    
     public override bool Attack(Vector3 target, Vector3 playerPos)
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName))

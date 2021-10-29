@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//changes the emmission intensity of the objects in the meshes array based off the CurMana in the manaStorge 
 public class OnboardManaDisplay : MonoBehaviour
 {
     public MeshRenderer[] meshes;

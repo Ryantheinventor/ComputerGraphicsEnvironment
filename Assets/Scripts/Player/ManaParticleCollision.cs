@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Adds mana to a Mana component after a particle collision
 public class ManaParticleCollision : MonoBehaviour
 {
     public float manaPerParticle = 1;
