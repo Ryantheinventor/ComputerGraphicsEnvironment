@@ -7,3 +7,6 @@ Basic Motions Free (https://assetstore.unity.com/packages/3d/animations/basic-mo
 Kenny Assets:
     Game Icons (https://kenney.nl/assets/game-icons)
     Particles Pack (https://kenney.nl/assets/particle-pack)
+freesound.org:
+    https://freesound.org/people/Tomlija/sounds/103333/
+    https://freesound.org/people/ejfortin/sounds/49693/

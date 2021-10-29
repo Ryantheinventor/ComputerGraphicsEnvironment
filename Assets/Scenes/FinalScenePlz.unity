@@ -2171,7 +2171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308986764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: 3.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1167678110}
@@ -2198,7 +2198,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2233,7 +2233,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4105,6 +4105,10 @@ PrefabInstance:
       propertyPath: manaNeeded
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7834297786641314348, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
+      propertyPath: fireSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a7d87a6931dcf077785fa5c91ea73a7d, type: 3}
     - target: {fileID: 7834297786641314350, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.25
