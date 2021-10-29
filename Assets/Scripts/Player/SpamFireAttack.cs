@@ -12,9 +12,12 @@ public class SpamFireAttack : Weapon
     private Animator animator;
     private Vector3 direction = Vector3.forward;
     private ParticleCollisionHandler pch;
+    public AudioClip fireSFX;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         pch = ps.GetComponent<ParticleCollisionHandler>();
         pch.damage = damage;
         playerMovement = GetComponent<PlayerMovement>();
@@ -31,6 +34,7 @@ public class SpamFireAttack : Weapon
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName))
         {
+            audioSource.PlayOneShot(fireSFX);
             playerMovement.SetNewTargetLook(target);
             animator.SetTrigger("Spam");
             ps.Play();
