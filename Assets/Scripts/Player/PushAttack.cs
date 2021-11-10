@@ -7,9 +7,12 @@ public class PushAttack : Weapon
     public string animStateName = "Push";
     private Animator animator;
     public GameObject pushVFXFab;
+    public AudioClip fireSFX;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<PlayerMovement>().playerAnimator;
     }
 
@@ -17,6 +20,7 @@ public class PushAttack : Weapon
     {
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName))
         {
+            audioSource.PlayOneShot(fireSFX);
             animator.SetTrigger("Push");
             GameObject newVFX = Instantiate(pushVFXFab);
             newVFX.transform.position = playerPos;

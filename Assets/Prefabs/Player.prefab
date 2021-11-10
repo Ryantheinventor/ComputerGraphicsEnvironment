@@ -1085,6 +1085,7 @@ MonoBehaviour:
   manaNeeded: 30
   animStateName: Push
   pushVFXFab: {fileID: 2013117700241643765, guid: 4705690d4e102a84f8bc56e3dcf607f9, type: 3}
+  fireSFX: {fileID: 8300000, guid: 706fdb06c2431fef39b736458fbaf477, type: 3}
 --- !u!114 &7834297786641314348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,7 +1103,7 @@ MonoBehaviour:
   animStateName: Spam
   ps: {fileID: 7834297786910944597}
   particleMount: {fileID: 7834297785810253068}
-  fireSFX: {fileID: 8300000, guid: 351c0d9e48d03df30aac17186716a6cb, type: 3}
+  fireSFX: {fileID: 8300000, guid: a7d87a6931dcf077785fa5c91ea73a7d, type: 3}
 --- !u!114 &7834297786641314388
 MonoBehaviour:
   m_ObjectHideFlags: 0
