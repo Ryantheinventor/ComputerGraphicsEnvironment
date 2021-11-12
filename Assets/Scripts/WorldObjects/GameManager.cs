@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
 
     void OnDestroy() 
     {
+        Time.timeScale = 1f;
         gamePaused = false;    
     }
 
