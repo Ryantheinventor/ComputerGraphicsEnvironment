@@ -78,4 +78,10 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    void OnDestroy() 
+    {
+        gamePaused = false;    
+    }
+
 }

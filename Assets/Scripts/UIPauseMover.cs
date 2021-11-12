@@ -23,7 +23,6 @@ public class UIPauseMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameManager.gamePaused);
         if(GameManager.gamePaused == targetOnPause)
         {
             curTargetPos = targetPos;
