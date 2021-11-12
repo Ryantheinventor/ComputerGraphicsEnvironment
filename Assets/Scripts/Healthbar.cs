@@ -36,19 +36,19 @@ public class Healthbar : MonoBehaviour
     {
 
 
-        fastHealth = Mathf.Lerp(fastHealth, trueHealth, 10 * Time.deltaTime);
+        fastHealth = Mathf.Lerp(fastHealth, trueHealth, 10 * Time.unscaledDeltaTime);
         SetSize(fastHealth, fastBar);
         text.text = (int)fastHealth + "/" + (int)maxHealth;
 
         if (curWait <= 0)
         {
             
-            slowHealth = Mathf.Lerp(slowHealth, trueHealth, 15 * Time.deltaTime);
+            slowHealth = Mathf.Lerp(slowHealth, trueHealth, 15 * Time.unscaledDeltaTime);
             SetSize(slowHealth, slowBar);
         }
         else 
         {
-            curWait -= Time.deltaTime;
+            curWait -= Time.unscaledDeltaTime;
         }
 
         if (Mathf.Abs(slowHealth - trueHealth) < 1)

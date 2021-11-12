@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Floor
+  - Tip
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Minimap
   - NONVisible
   - LEDCoinRT
-  - 
+  - TipLayer
   - 
   - 
   - 

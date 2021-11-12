@@ -93,20 +93,20 @@ public class FancyButton : MonoBehaviour
         {
             if (mouseIsDown || Input.GetKey(hotKey))
             {
-                myImage.color = Color.Lerp(myImage.color, pressedTint, colorChangeSpeed * Time.deltaTime);
-                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + pressedPixelDelta, sizeChangeSpeed * Time.deltaTime);
+                myImage.color = Color.Lerp(myImage.color, pressedTint, colorChangeSpeed * Time.unscaledDeltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + pressedPixelDelta, sizeChangeSpeed * Time.unscaledDeltaTime);
                 onHold.Invoke();//invoke on hold here so the hotKey can triger it
             }
             else if (mouseIsOver)
             {
                 
-                myImage.color = Color.Lerp(myImage.color, selectedTint, colorChangeSpeed * Time.deltaTime);
-                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + selectedPixelDelta, sizeChangeSpeed * Time.deltaTime);
+                myImage.color = Color.Lerp(myImage.color, selectedTint, colorChangeSpeed * Time.unscaledDeltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize + selectedPixelDelta, sizeChangeSpeed * Time.unscaledDeltaTime);
             }
             else
             {
-                myImage.color = Color.Lerp(myImage.color, startTint, colorChangeSpeed * Time.deltaTime);
-                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize, sizeChangeSpeed * Time.deltaTime);
+                myImage.color = Color.Lerp(myImage.color, startTint, colorChangeSpeed * Time.unscaledDeltaTime);
+                myRect.sizeDelta = Vector2.Lerp(myRect.sizeDelta, defaultSize, sizeChangeSpeed * Time.unscaledDeltaTime);
             }
         }
         //invoke on click here for the hotkey

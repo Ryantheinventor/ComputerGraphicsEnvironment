@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //target picking (only avalible when mouse is not over UI)
-        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject() && !GameManager.gamePaused)
         {
 
             Ray ray = theCam.ScreenPointToRay(new Vector2(Input.mousePosition.x, Input.mousePosition.y));

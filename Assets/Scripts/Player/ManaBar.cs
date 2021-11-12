@@ -30,7 +30,7 @@ public class ManaBar : MonoBehaviour
     //animate the bar into an acurate scale
     private void Update()
     {
-        curValue = Mathf.Lerp(curValue, trueMana, 15 * Time.deltaTime);
+        curValue = Mathf.Lerp(curValue, trueMana, 15 * Time.unscaledDeltaTime);
         SetSize(curValue, bar);
     }
 

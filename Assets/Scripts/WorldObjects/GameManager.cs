@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public GameObject loseCanvas;
     public GameObject winCanvas;
     private bool gameOver = false;
+
+    public static bool gamePaused = false;
+
     private void Start()
     {
         healthbar.OnDamage.AddListener(OnPlayerDamage);
@@ -57,5 +60,22 @@ public class GameManager : MonoBehaviour
         pm.playerAnimator.SetFloat("RelativeY",0);
         pm.GetComponent<PlayerAttack>().enabled = false;
         pm.enabled = false;
+    }
+
+    private void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(gamePaused)
+            {
+                Time.timeScale = 1f;
+                gamePaused = false;
+            }
+            else
+            {
+                Time.timeScale = 0f;
+                gamePaused = true;
+            }
+        }
     }
 }
