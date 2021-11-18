@@ -11,8 +11,11 @@ public class ClapAttack : Weapon
     public float damage = 10f;
     public float maxRange = 3;
     public GameObject vfxFab;
+    public AudioClip fireSFX;
+    private AudioSource audioSource;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<PlayerMovement>().playerAnimator;
     }
     public override bool Attack(Vector3 target, Vector3 playerPos)
@@ -20,7 +23,7 @@ public class ClapAttack : Weapon
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName(animStateName) && Vector3.Distance(playerPos,target) < maxRange) 
         {
             animator.SetTrigger("Clap");
-
+            audioSource.PlayOneShot(fireSFX);
             GameObject newVFX = Instantiate(vfxFab);
             newVFX.transform.position = target;
             newVFX.transform.forward = target - playerPos;

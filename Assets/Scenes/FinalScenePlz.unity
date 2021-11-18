@@ -3438,6 +3438,8 @@ MonoBehaviour:
   CoinText: {fileID: 331223831}
   loseCanvas: {fileID: 6214864016952729901, guid: 396ee94b8d0272208aa6189dbde57363, type: 3}
   winCanvas: {fileID: 3892055253346892073, guid: 7989d3b86635a43b4985ca24e6b21448, type: 3}
+  camAudio: {fileID: 1687258588}
+  coinClip: {fileID: 8300000, guid: e192ffcea2134333bba3632a3eecddf9, type: 3}
 --- !u!114 &2040954175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4149,6 +4151,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7834297786641314346, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
+      propertyPath: fireSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c5bdef9c48ea67e45849c0c04137606a, type: 3}
     - target: {fileID: 7834297786641314347, guid: ba23c65a116752a468f78461776f8cc1, type: 3}
       propertyPath: manaTracker
       value: 

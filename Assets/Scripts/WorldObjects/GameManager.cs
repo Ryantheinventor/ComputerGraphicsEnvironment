@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
         get => curCoins;
         set
         { 
+            if(value > curCoins)
+            {
+                camAudio.PlayOneShot(coinClip);
+            }
             curCoins = value;
             CoinText.text = CurCoins + "/" + totalCoins;
             //ends the game when all coins are collected
@@ -32,6 +36,9 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
 
     public static bool gamePaused = false;
+
+    public AudioSource camAudio;
+    public AudioClip coinClip;
 
     private void Start()
     {

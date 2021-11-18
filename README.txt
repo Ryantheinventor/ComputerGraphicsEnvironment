@@ -12,3 +12,5 @@ External Assets:
         https://freesound.org/people/ejfortin/sounds/49693/
         https://freesound.org/people/Garuda1982/sounds/563047/
         https://freesound.org/people/uzerx/sounds/63138/
+        https://freesound.org/people/DWOBoyle/sounds/140382/    
+        https://freesound.org/people/TheKnave/sounds/435623/
