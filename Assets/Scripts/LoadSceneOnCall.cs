@@ -6,6 +6,25 @@ public class LoadSceneOnCall : MonoBehaviour
 {
     public void Load(int id)
     {
-        SceneManager.LoadScene(id);
+        StartCoroutine(LoadAsyncScene(id));
     }
+
+    IEnumerator LoadAsyncScene(int id)
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(id);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log(asyncLoad.progress);
+            yield return null;
+        }
+    }
+
+
 }
