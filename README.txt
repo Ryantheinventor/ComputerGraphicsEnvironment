@@ -1,6 +1,6 @@
-Test project for unity environment tools
+This project was made for the purpose of exploring Unity's graphics tools.
 
-Unity 2020.1.10f1
+Unity version: 2020.1.10f1
 
 External Assets:
     Basic Motions Free (https://assetstore.unity.com/packages/3d/animations/basic-motions-free-154271#description)
